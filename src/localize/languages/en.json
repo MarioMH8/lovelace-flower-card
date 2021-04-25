@@ -3,7 +3,7 @@
     "version": "Version",
     "invalid_configuration": "Invalid configuration",
     "invalid_configuration_entity": "Invalid entity configuration",
-    "invalid_configuration_specie": "Invalid specie configuration",
+    "invalid_configuration_species": "Invalid species configuration",
     "show_warning": "Show Warning",
     "show_error": "Show Error"
   },

@@ -44,8 +44,8 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
     return this._config?.entity || '';
   }
 
-  get _specie(): string {
-    return this._config?.specie || '';
+  get _species(): string {
+    return this._config?.species || '';
   }
 
   get _tap_action(): ActionConfig {
@@ -98,9 +98,9 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
       </div>
       <div class="values">
         <paper-input
-          label="Specie"
-          .value=${this._specie}
-          .configValue=${'specie'}
+          label="species"
+          .value=${this._species}
+          .configValue=${'species'}
           @value-changed=${this._valueChanged}>
         </paper-input>
       </div>

@@ -62,8 +62,8 @@ export class FlowerCard extends LitElement {
     if (!config.entity) {
       throw new Error(localize('common.invalid_configuration_entity'));
     }
-    if (!config.specie) {
-      throw new Error(localize('common.invalid_configuration_specie'));
+    if (!config.species) {
+      throw new Error(localize('common.invalid_configuration_species'));
     }
 
     if (config.test_gui) {
@@ -88,7 +88,7 @@ export class FlowerCard extends LitElement {
     if (!this.config.entity) {
       return this._showError(localize('common.show_error'));
     }
-    if (!this.config.specie) {
+    if (!this.config.species) {
       return this._showError(localize('common.show_error'));
     }
 
