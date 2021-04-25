@@ -4,5 +4,9 @@
     "invalid_configuration": "Error de configuración",
     "show_warning": "Mostrar advertencias",
     "show_error": "Mostrar errores"
+  },
+  "card":{
+    "name": "Estado de la planta",
+    "description": "Esta tarjeta te permite visualizar el estado de tus plantas"
   }
 }

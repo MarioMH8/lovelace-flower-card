@@ -4,5 +4,9 @@
     "invalid_configuration": "Invalid configuration",
     "show_warning": "Show Warning",
     "show_error": "Show Error"
+  },
+  "card":{
+    "name": "Flower Card",
+    "description": "A template custom card for you to create something awesome"
   }
 }
