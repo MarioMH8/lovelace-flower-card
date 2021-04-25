@@ -4,6 +4,7 @@
     "invalid_configuration": "Invalid configuration",
     "invalid_configuration_entity": "Invalid entity configuration",
     "invalid_configuration_species": "Invalid species configuration",
+    "invalid_species": "Invalid species",
     "show_warning": "Show Warning",
     "show_error": "Show Error"
   },

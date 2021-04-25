@@ -4,6 +4,7 @@
     "invalid_configuration": "Error de configuración",
     "invalid_configuration_entity": "Error en la configuración de la entidad",
     "invalid_configuration_species": "Error en la configuración de la especies",
+    "invalid_species": "No se ha encontrado la especie seleccionada",
     "show_warning": "Mostrar advertencias",
     "show_error": "Mostrar errores"
   },
