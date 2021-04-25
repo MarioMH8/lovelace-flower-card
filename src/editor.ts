@@ -55,7 +55,7 @@ const options = {
   },
 };
 
-@customElement('boilerplate-card-editor')
+@customElement('flower-card-editor')
 export class BoilerplateCardEditor extends LitElement implements LovelaceCardEditor {
   @property({ attribute: false }) public hass?: HomeAssistant;
   @internalProperty() private _config?: BoilerplateCardConfig;
