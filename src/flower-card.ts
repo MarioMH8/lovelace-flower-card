@@ -24,13 +24,13 @@ import './editor';
 
 import type { BoilerplateCardConfig } from './types';
 import { actionHandler } from './action-handler-directive';
-import { CARD_VERSION } from './const';
 import { localize } from './localize/localize';
 import * as flowers from './flower-card.json';
+import * as p from '../package.json';
 
 /* eslint no-console: 0 */
 console.info(
-  `%c  FLOWER-CARD \n%c  ${localize('common.version')} ${CARD_VERSION}    `,
+  `%c  FLOWER-CARD \n%c  ${localize('common.version')}: ${p.version}    `,
   'color: orange; font-weight: bold; background: black',
   'color: white; font-weight: bold; background: dimgray',
 );
@@ -133,7 +133,7 @@ export class FlowerCard extends LitElement {
                 hasHold: hasAction(this.config.hold_action),
                 hasDoubleClick: hasAction(this.config.double_tap_action),
             })}>
-              <img src="/local/flower-card/images/${this.config.species}.jpg">
+              <img src="/local/community/flower-card/images/${this.config.species}.jpg">
               <span id="name"> ${this.config.name || state.attributes.friendly_name}</span>
               <span id="species"> ${flower[1]} </span>
           </div>
@@ -201,6 +201,7 @@ export class FlowerCard extends LitElement {
 			.header {
 				padding-top: 8px;
 				height: 72px;
+				cursor: pointer;
 			}
 			.header > img {
 				width: 88px;

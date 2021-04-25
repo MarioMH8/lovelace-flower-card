@@ -14,6 +14,7 @@ import { HomeAssistant, fireEvent, LovelaceCardEditor, ActionConfig } from 'cust
 
 import { BoilerplateCardConfig } from './types';
 import { localize } from './localize/localize';
+import * as flowers from './flower-card.json';
 
 @customElement('flower-card-editor')
 export class BoilerplateCardEditor extends LitElement implements LovelaceCardEditor {
@@ -72,6 +73,8 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
     // You can restrict on domain type
     const entities = Object.keys(this.hass.states).filter(eid => eid.substr(0, eid.indexOf('.')) === 'plant');
 
+    const flowerValues = flowers.db.map(v => v[0]);
+
     return html`
       <div class="values">
         <paper-input
@@ -98,12 +101,20 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
         </paper-dropdown-menu>
       </div>
       <div class="values">
-        <paper-input
+        <paper-dropdown-menu
           label=${localize('editor.species')}
-          .value=${this._species}
-          .configValue=${'species'}
-          @value-changed=${this._valueChanged}>
-        </paper-input>
+          @value-changed=${this._valueChanged}
+          .configValue=${'species'}>
+            <paper-listbox 
+              slot="dropdown-content" 
+              .selected=${flowerValues.indexOf(this._species)}>
+                ${flowerValues.map(entity => {
+                  return html`
+                    <paper-item>${entity}</paper-item>
+                  `;
+                })}
+            </paper-listbox>
+        </paper-dropdown-menu>
       </div>
     `
   }
