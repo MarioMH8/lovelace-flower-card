@@ -2,11 +2,15 @@
   "common": {
     "version": "Versión",
     "invalid_configuration": "Error de configuración",
+    "invalid_configuration_entity": "Error en la configuración de la entidad",
     "show_warning": "Mostrar advertencias",
     "show_error": "Mostrar errores"
   },
   "card":{
     "name": "Estado de la planta",
     "description": "Esta tarjeta te permite visualizar el estado de tus plantas"
+  },
+  "default":{
+    "name": "Qrquídea"
   }
 }
