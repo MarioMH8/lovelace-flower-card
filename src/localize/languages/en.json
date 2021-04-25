@@ -13,5 +13,10 @@
   },
   "default":{
     "name": "Orchid"
+  },
+  "editor":{
+    "name": "Name (Optional)",
+    "entity": "Entity (Required)",
+    "species": "Species (Required)"
   }
 }

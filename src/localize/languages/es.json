@@ -13,5 +13,10 @@
   },
   "default":{
     "name": "Qrquídea"
+  },
+  "editor":{
+    "name": "Nombre (Opcional)",
+    "entity": "Entidad (Requerido)",
+    "species": "Especie (Requerido)"
   }
 }

@@ -13,6 +13,7 @@ import {
 import { HomeAssistant, fireEvent, LovelaceCardEditor, ActionConfig } from 'custom-card-helpers';
 
 import { BoilerplateCardConfig } from './types';
+import { localize } from './localize/localize';
 
 @customElement('flower-card-editor')
 export class BoilerplateCardEditor extends LitElement implements LovelaceCardEditor {
@@ -74,7 +75,7 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
     return html`
       <div class="values">
         <paper-input
-          label="Name (Optional)"
+          label=${localize('editor.name')}
           .value=${this._name}
           .configValue=${'name'}
           @value-changed=${this._valueChanged}>
@@ -82,7 +83,7 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
       </div>
       <div class="values">
         <paper-dropdown-menu
-          label="Entity (Required)"
+          label=${localize('editor.entity')}
           @value-changed=${this._valueChanged}
           .configValue=${'entity'}>
             <paper-listbox 
@@ -98,7 +99,7 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
       </div>
       <div class="values">
         <paper-input
-          label="species"
+          label=${localize('editor.species')}
           .value=${this._species}
           .configValue=${'species'}
           @value-changed=${this._valueChanged}>
