@@ -201,6 +201,7 @@ export class FlowerCard extends LitElement {
 			.header {
 				padding-top: 8px;
 				height: 72px;
+				cursor: pointer;
 			}
 			.header > img {
 				width: 88px;
