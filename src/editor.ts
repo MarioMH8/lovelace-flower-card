@@ -99,7 +99,7 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
       <div class="values">
         <paper-input
           label="Specie"
-          .value=${this._name}
+          .value=${this._specie}
           .configValue=${'specie'}
           @value-changed=${this._valueChanged}>
         </paper-input>
