@@ -43,7 +43,7 @@ console.info(
 });
 
 @customElement('flower-card')
-export class BoilerplateCard extends LitElement {
+export class FlowerCard extends LitElement {
   public static async getConfigElement(): Promise<LovelaceCardEditor> {
     return document.createElement('flower-card-editor');
   }
