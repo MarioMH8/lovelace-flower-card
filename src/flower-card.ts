@@ -24,13 +24,13 @@ import './editor';
 
 import type { BoilerplateCardConfig } from './types';
 import { actionHandler } from './action-handler-directive';
-import { CARD_VERSION } from './const';
 import { localize } from './localize/localize';
 import * as flowers from './flower-card.json';
+import * as p from '../package.json';
 
 /* eslint no-console: 0 */
 console.info(
-  `%c  FLOWER-CARD \n%c  ${localize('common.version')} ${CARD_VERSION}    `,
+  `%c  FLOWER-CARD \n%c  ${localize('common.version')}: ${p.version}    `,
   'color: orange; font-weight: bold; background: black',
   'color: white; font-weight: bold; background: dimgray',
 );
