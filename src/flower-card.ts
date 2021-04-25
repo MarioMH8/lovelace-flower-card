@@ -133,7 +133,7 @@ export class FlowerCard extends LitElement {
                 hasHold: hasAction(this.config.hold_action),
                 hasDoubleClick: hasAction(this.config.double_tap_action),
             })}>
-              <img src="/local/community/flower-card/images/${this.config.species}.jpg">
+              <img src="/local/community/lovelace-flower-card/images/${this.config.species}.jpg">
               <span id="name"> ${this.config.name || state.attributes.friendly_name}</span>
               <span id="species"> ${flower[1]} </span>
           </div>
