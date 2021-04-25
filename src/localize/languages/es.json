@@ -3,6 +3,7 @@
     "version": "Versión",
     "invalid_configuration": "Error de configuración",
     "invalid_configuration_entity": "Error en la configuración de la entidad",
+    "invalid_configuration_specie": "Error en la configuración de la especie",
     "show_warning": "Mostrar advertencias",
     "show_error": "Mostrar errores"
   },

@@ -52,16 +52,18 @@ export class FlowerCard extends LitElement {
     return {};
   }
 
-  // TODO Add any properities that should cause your element to re-render here
-  // https://lit-element.polymer-project.org/guide/properties
   @property({ attribute: false }) public hass!: HomeAssistant;
   @internalProperty() private config!: BoilerplateCardConfig;
 
-  // https://lit-element.polymer-project.org/guide/properties#accessors-custom
   public setConfig(config: BoilerplateCardConfig): void {
-    // TODO Check for required fields and that they are of the proper format
     if (!config) {
       throw new Error(localize('common.invalid_configuration'));
+    }
+    if (!config.entity) {
+      throw new Error(localize('common.invalid_configuration_entity'));
+    }
+    if (!config.specie) {
+      throw new Error(localize('common.invalid_configuration_specie'));
     }
 
     if (config.test_gui) {
@@ -69,12 +71,11 @@ export class FlowerCard extends LitElement {
     }
 
     this.config = {
-      name: 'Boilerplate',
+      name: localize('default.name'),
       ...config,
     };
   }
 
-  // https://lit-element.polymer-project.org/guide/lifecycle#shouldupdate
   protected shouldUpdate(changedProps: PropertyValues): boolean {
     if (!this.config) {
       return false;
@@ -83,14 +84,11 @@ export class FlowerCard extends LitElement {
     return hasConfigOrEntityChanged(this, changedProps, false);
   }
 
-  // https://lit-element.polymer-project.org/guide/templates
   protected render(): TemplateResult | void {
-    // TODO Check for stateObj or other necessary things and render a warning if missing
-    if (this.config.show_warning) {
-      return this._showWarning(localize('common.show_warning'));
+    if (!this.config.entity) {
+      return this._showError(localize('common.show_error'));
     }
-
-    if (this.config.show_error) {
+    if (!this.config.specie) {
       return this._showError(localize('common.show_error'));
     }
 
@@ -133,7 +131,6 @@ export class FlowerCard extends LitElement {
     `;
   }
 
-  // https://lit-element.polymer-project.org/guide/styles
   static get styles(): CSSResult {
     return css``;
   }

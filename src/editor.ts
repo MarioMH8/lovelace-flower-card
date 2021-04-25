@@ -44,6 +44,10 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
     return this._config?.entity || '';
   }
 
+  get _specie(): string {
+    return this._config?.specie || '';
+  }
+
   get _tap_action(): ActionConfig {
     return this._config?.tap_action || { action: 'more-info' };
   }
@@ -69,6 +73,14 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
 
     return html`
       <div class="values">
+        <paper-input
+          label="Name (Optional)"
+          .value=${this._name}
+          .configValue=${'name'}
+          @value-changed=${this._valueChanged}>
+        </paper-input>
+      </div>
+      <div class="values">
         <paper-dropdown-menu
           label="Entity (Required)"
           @value-changed=${this._valueChanged}
@@ -86,9 +98,9 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
       </div>
       <div class="values">
         <paper-input
-          label="Name (Optional)"
+          label="Specie"
           .value=${this._name}
-          .configValue=${'name'}
+          .configValue=${'specie'}
           @value-changed=${this._valueChanged}>
         </paper-input>
       </div>
@@ -130,8 +142,6 @@ export class BoilerplateCardEditor extends LitElement implements LovelaceCardEdi
   static get styles(): CSSResult {
     return css`
       .values {
-        padding-left: 16px;
-        background: var(--secondary-background-color);
         display: grid;
       }
     `;
