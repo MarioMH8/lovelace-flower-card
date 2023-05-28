@@ -1,19 +1,19 @@
 
 ## Options
 
-| Name              | Type    | Requirement  | Description                                 | Default             |
-| ----------------- | ------- | ------------ | ------------------------------------------- | ------------------- |
-| type              | string  | **Required** | `custom:flower-card`                   |
-| name              | string  | **Optional** | Card name                                   | `Orchid`       |
-| entity            | string  | **Optional** | Home Assistant entity ID.                   | `none`              |
-| tap_action        | object  | **Optional** | Action to take on tap                       | `action: more-info` |
-| hold_action       | object  | **Optional** | Action to take on hold                      | `none`              |
-| double_tap_action | object  | **Optional** | Action to take on double tap                | `none`              |
+| Name              | Type   | Requirement  | Description                  | Default             |
+|-------------------|--------|--------------|------------------------------|---------------------|
+| type              | string | **Required** | `custom:flower-card`         |
+| name              | string | **Optional** | Card name                    | `Orchid`            |
+| entity            | string | **Optional** | Home Assistant entity ID.    | `none`              |
+| tap_action        | object | **Optional** | Action to take on tap        | `action: more-info` |
+| hold_action       | object | **Optional** | Action to take on hold       | `none`              |
+| double_tap_action | object | **Optional** | Action to take on double tap | `none`              |
 
 ## Action Options
 
 | Name            | Type   | Requirement  | Description                                                                                                                            | Default     |
-| --------------- | ------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+|-----------------|--------|--------------|----------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | action          | string | **Required** | Action to perform (more-info, toggle, call-service, navigate url, none)                                                                | `more-info` |
 | navigation_path | string | **Optional** | Path to navigate to (e.g. /lovelace/0/) when action defined as navigate                                                                | `none`      |
 | url             | string | **Optional** | URL to open on click when action is url. The URL will open in a new tab                                                                | `none`      |
