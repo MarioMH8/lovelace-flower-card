@@ -1,0 +1,26 @@
+{
+	"extends": [
+		"@hexatool/eslint-config-typescript"
+	],
+	"overrides": [
+		{
+			"files": [
+				"**/*.ts",
+				"**/*.ts"
+			],
+
+			"parserOptions": {
+				"project": [
+					"./tsconfig.json"
+				]
+			},
+			"rules": {
+				"@typescript-eslint/no-unnecessary-condition": "warn"
+			}
+		}
+	],
+	"env": {
+		"browser": true,
+		"node": true
+	}
+}
