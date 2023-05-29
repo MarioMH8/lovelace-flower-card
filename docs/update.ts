@@ -118,7 +118,7 @@ for (const filePath of files) {
 	const name = sanitize(obj.display_pid);
 	const image = obj.image.split(';base64,').pop() ?? '';
 	README = `${README}
-- [${name}](plants/${key}.md)`;
+- [${name}](./plants/${key}.md)`;
 	fs.writeFileSync(path.resolve(imagesFolder, `${key}.png`), image, { encoding: 'base64' });
 	fs.writeFileSync(path.resolve(plantsFolder, `${key}.md`), plantReadme(obj), {
 		encoding: 'utf-8',
