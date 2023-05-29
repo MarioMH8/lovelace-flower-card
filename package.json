@@ -1,47 +1,51 @@
 {
-  "name": "lovelace-flower-card",
-  "version": "1.0.0",
-  "description": "Lovelace flower-card",
-  "keywords": [
-    "home-assistant",
-    "homeassistant",
-    "hass",
-    "automation",
-    "lovelace",
-    "flower-card"
-  ],
-  "homepage": "https://github.com/hexatool/fs",
-  "bugs": {
-    "url": "https://github.com/hexatool/fs/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MarioMH8/flower-card"
-  },
-  "author": "Mario Menéndez <dev@mariomh.com>",
-  "license": "MIT",
-  "module": "dist/flower-card.js",
-  "scripts": {
-    "build": "vite build",
-    "dev": "vite dev",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "custom-card-helpers": "1.9.0",
-    "lit": "2.7.4"
-  },
-  "devDependencies": {
-    "@hexatool/eslint-config-typescript": "1.0.9",
-    "@hexatool/tsconfig": "20.0.1",
-    "eslint": "8.41.0",
-    "typescript": "^5.0.4",
-    "vite": "4.3.9"
-  },
-  "volta": {
-    "node": "20.1.0",
-    "yarn": "3.5.1"
-  },
-  "packageManager": "yarn@3.5.1"
+	"name": "lovelace-flower-card",
+	"version": "1.0.0",
+	"description": "Lovelace flower-card",
+	"keywords": [
+		"home-assistant",
+		"homeassistant",
+		"hass",
+		"automation",
+		"lovelace",
+		"flower-card"
+	],
+	"homepage": "https://github.com/hexatool/fs",
+	"bugs": {
+		"url": "https://github.com/hexatool/fs/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MarioMH8/flower-card"
+	},
+	"author": "Mario Menéndez <dev@mariomh.com>",
+	"license": "MIT",
+	"module": "dist/flower-card.js",
+	"scripts": {
+		"build": "vite build",
+		"build:docs": "tsx docs/update.ts",
+		"dev": "vite dev",
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix .",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"custom-card-helpers": "1.9.0",
+		"lit": "2.7.4"
+	},
+	"devDependencies": {
+		"@hexatool/eslint-config-typescript": "1.0.9",
+		"@hexatool/tsconfig": "20.0.1",
+		"@types/node": "^20.2.5",
+		"eslint": "8.41.0",
+		"glob": "10.2.6",
+		"tsx": "3.12.7",
+		"typescript": "^5.0.4",
+		"vite": "4.3.9"
+	},
+	"volta": {
+		"node": "20.1.0",
+		"yarn": "3.5.1"
+	},
+	"packageManager": "yarn@3.5.1"
 }
