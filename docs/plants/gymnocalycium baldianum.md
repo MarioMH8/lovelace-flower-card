@@ -1,0 +1,36 @@
+<h1 align='center'>Gymnocalycium baldianum</h1>
+<p align="center">
+    <img 
+        align='center'
+        width='320'
+        src="../images/gymnocalycium baldianum.png" 
+        alt='Gymnocalycium baldianum' />
+</p>
+
+## Info
+
+ - **Origin**: Argentina
+ - **Production**: China
+ - **Category**: Cactaceae, Gymnocalycium
+ - **Blooming**: Succulent plants, sometimes flowers with a short period flowering time 2-3 days
+ - **Color**: Green, flower color rose red, orange
+
+## Maintenance
+
+ - **Size**: Diameter ≥ 5 cm, height ≥ 3 cm
+ - **Soil**: Peat and akadama mixed in 3:1 ratio
+ - **Sunlight**: Like sunshine, put in sunny places, shade properly under summer strong light
+ - **Watering**: Resistant to drought, water thoroughly when soil is dry, reduce watering in winter dormancy
+ - **Fertilization**: Dilute fertilizers following instructions, apply once monthly in spring to autumn
+ - **Pruning**: Remove dead and rotten part timely
+
+## Parameter
+
+| Name         | Min  | Max   |
+|--------------|------|-------|
+| Light (mmol) | 3500 | 8700  |
+| Light (lux)  | 3000 | 100000 |
+| Temp         | 5    | 35    |
+| Humid        | 15   | 80    |
+| Soil (moist) | 7   | 50    |
+| Soil (ec)    | 100  | 1000  |

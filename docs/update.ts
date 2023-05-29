@@ -55,8 +55,48 @@ function sanitize(str: string): string {
 		.replaceAll(`&`, '');
 }
 
+function plantReadme(plant: Plant): string {
+	return `<h1 align='center'>${plant.display_pid}</h1>
+<p align="center">
+    <img 
+        align='center'
+        width='320'
+        src="../images/${sanitize(plant.pid)}.png" 
+        alt='${plant.display_pid}' />
+</p>
+
+## Info
+
+ - **Origin**: ${plant.basic.origin}
+ - **Production**: ${plant.basic.production}
+ - **Category**: ${plant.basic.category}
+ - **Blooming**: ${plant.basic.blooming}
+ - **Color**: ${plant.basic.color}
+
+## Maintenance
+
+ - **Size**: ${plant.maintenance.size}
+ - **Soil**: ${plant.maintenance.soil}
+ - **Sunlight**: ${plant.maintenance.sunlight}
+ - **Watering**: ${plant.maintenance.watering}
+ - **Fertilization**: ${plant.maintenance.fertilization}
+ - **Pruning**: ${plant.maintenance.pruning}
+
+## Parameter
+
+| Name         | Min  | Max   |
+|--------------|------|-------|
+| Light (mmol) | ${plant.parameter.min_light_mmol} | ${plant.parameter.max_light_mmol}  |
+| Light (lux)  | ${plant.parameter.min_light_lux} | ${plant.parameter.max_light_lux} |
+| Temp         | ${plant.parameter.min_temp}    | ${plant.parameter.max_temp}    |
+| Humid        | ${plant.parameter.min_env_humid}   | ${plant.parameter.max_env_humid}    |
+| Soil (moist) | ${plant.parameter.min_soil_moist}   | ${plant.parameter.max_soil_moist}    |
+| Soil (ec)    | ${plant.parameter.min_soil_ec}  | ${plant.parameter.max_soil_ec}  |`;
+}
+
 const docsFolder = path.resolve(process.cwd(), 'docs');
 const imagesFolder = path.resolve(process.cwd(), 'docs', 'images');
+const plantsFolder = path.resolve(process.cwd(), 'docs', 'plants');
 const databaseFolder = path.resolve(process.cwd(), 'plant-database', 'json');
 const files = globSync(`${databaseFolder}/*.json`).sort();
 let README = `
@@ -80,6 +120,9 @@ for (const filePath of files) {
 	README = `${README}
 - [${name}](plants/${key}.md)`;
 	fs.writeFileSync(path.resolve(imagesFolder, `${key}.png`), image, { encoding: 'base64' });
+	fs.writeFileSync(path.resolve(plantsFolder, `${key}.md`), plantReadme(obj), {
+		encoding: 'utf-8',
+	});
 }
 
 fs.writeFileSync(path.resolve(docsFolder, 'README.md'), README, { encoding: 'utf-8' });
