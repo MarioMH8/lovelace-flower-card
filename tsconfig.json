@@ -1,12 +1,14 @@
 {
-  "extends": "@hexatool/tsconfig",
-  "compilerOptions": {
-    "lib": [
-      "es2017",
-      "dom",
-      "dom.iterable"
-    ],
-    "resolveJsonModule": true,
-	  "experimentalDecorators": true
-  }
+	"extends": "@hexatool/tsconfig",
+	"compilerOptions": {
+		"lib": [
+			"es2017",
+			"dom",
+			"dom.iterable"
+		],
+		"resolveJsonModule": true,
+		"experimentalDecorators": true
+	},
+	"include": ["src", "vite.config.ts"],
+	"exclude": ["node_modules", "dist"]
 }
