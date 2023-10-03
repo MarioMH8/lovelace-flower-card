@@ -37,7 +37,7 @@
     "@hexatool/tsconfig": "20.0.1",
     "eslint": "8.50.0",
     "typescript": "^5.0.4",
-    "vite": "4.4.9"
+    "vite": "4.4.10"
   },
   "volta": {
     "node": "20.8.0",
