@@ -2660,7 +2660,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit-html@npm:^2.7.0, lit-html@npm:^2.8.0":
+"lit-html@npm:^2.8.0":
   version: 2.8.0
   resolution: "lit-html@npm:2.8.0"
   dependencies:
@@ -2669,18 +2669,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit@npm:2.7.4":
-  version: 2.7.4
-  resolution: "lit@npm:2.7.4"
-  dependencies:
-    "@lit/reactive-element": ^1.6.0
-    lit-element: ^3.3.0
-    lit-html: ^2.7.0
-  checksum: 7494f4e814fca0ebf7a73923c85454531aac26ff83f0d4d5afe62ebbc6225363c9df41f88147d79d5d3ab518925ceb9b27a557bee610bbb414ae0339c513f5a3
-  languageName: node
-  linkType: hard
-
-"lit@npm:^2.1.1":
+"lit@npm:2.8.0, lit@npm:^2.1.1":
   version: 2.8.0
   resolution: "lit@npm:2.8.0"
   dependencies:
@@ -2715,7 +2704,7 @@ __metadata:
     "@hexatool/tsconfig": 20.0.1
     custom-card-helpers: 1.9.0
     eslint: 8.57.0
-    lit: 2.7.4
+    lit: 2.8.0
     typescript: ^5.0.4
     vite: 4.5.2
   languageName: unknown
