@@ -33,7 +33,7 @@
     "lit": "2.7.4"
   },
   "devDependencies": {
-    "@hexatool/eslint-config-typescript": "1.0.11",
+    "@hexatool/eslint-config-typescript": "2.0.1",
     "@hexatool/tsconfig": "20.0.1",
     "eslint": "8.57.0",
     "typescript": "^5.0.4",
